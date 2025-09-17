@@ -1,0 +1,45 @@
+{
+  "login": {
+    "title": "Masuk ke akun anda",
+    "email": "Email",
+    "enterEmail": "Masukkan email",
+    "password": "Kata Sandi",
+    "enterPassword": "Masukkan kata sandi",
+    "signUp": "Daftar",
+    "loginButton": "Masuk"
+  },
+  "menu": {
+    "dashboard": "Dasbor",
+    "company": "Perusahaan",
+    "officePosition": "Posisi Jabatan",
+    "config": "Konfigurasi Sistem",
+    "setting" : "Pengaturan"
+  },
+  "position": {
+    "title": "Manajemen Posisi Jabatan",
+    "table": {
+      "positionName": "Nama Posisi",
+      "positionLevel": "Tingkatan Posisi",
+      "positionDescription": "Deskripsi Posisi",
+      "action": "Aksi"
+    },
+    "level": {
+      "director": "Direksi",
+      "generalManager": "Manajer Umum",
+      "manager": "Manajer",
+      "staff": "Staf",
+      "nonStaff": "Non Staf"
+    }
+  },
+  "actionButton": {
+    "add": "Tambah",
+    "edit": "Edit",
+    "update": "Update",
+    "delete": "Hapus",
+    "close": "Tutup"
+  },
+  "error": {
+    "noDataFound": "Tidak Ada Data Yang Ditemukan",
+    "errorFormMessage": "Formulir ini diperlukan"
+  }
+}

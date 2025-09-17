@@ -1,0 +1,10 @@
+.titleLayout {
+  font-size: 22px !important;
+  line-height: 30px !important;
+  font-weight: 600 !important;
+
+  @media (max-width: 768px) {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+}

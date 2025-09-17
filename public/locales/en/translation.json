@@ -1,0 +1,45 @@
+{
+  "login": {
+    "title": "Login to your account",
+    "email": "Email",
+    "enterEmail": "Enter your email",
+    "password": "Password",
+    "enterPassword": "Enter your password",
+    "signUp": "Sign Up",
+    "loginButton": "Login"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "company": "Company",
+    "officePosition": "Office Position",
+    "config": "System Configuration",
+    "setting" : "Setting"
+  },
+  "position": {
+    "title": "Office Position Management",
+    "table": {
+      "positionName": "Position Name",
+      "positionLevel": "Position Level",
+      "positionDescription": "Position Description",
+      "action": "Action"
+    },
+    "level": {
+      "director": "Director",
+      "generalManager": "General Manager",
+      "manager": "Manager",
+      "staff": "Staff",
+      "nonStaff": "Non Staff"
+    }
+  },
+  "actionButton": {
+    "add": "Add",
+    "edit": "Edit",
+    "update": "Update",
+    "delete": "Delete",
+    "close": "Close"
+  },
+  "error": {
+    "noDataFound": "No Data Found",
+    "errorFormMessage": "This form is required"
+  }
+}
