@@ -65,7 +65,6 @@ const FormAdjustPosition = ({ dataPosition, onCloseForm, reloadList }) => {
       level: `${form.level}`
     }
     const isError = validation(validateForm, setValidationForm)
-    console.log(isError)
     if (isError) {
       setLoadingForm(false)
       return
@@ -77,14 +76,14 @@ const FormAdjustPosition = ({ dataPosition, onCloseForm, reloadList }) => {
     }
     if (dataPosition === null) {
       methodFunction = addPosition(payload)
-      titleMessageSuccess = 'Tambah Posisi Jabatan Berhasil'
-      captionMessageSuccess = 'Anda telah berhasil menambahkan posisi jabatan baru'
-      titleMessageError = 'Gagal Menambahkan Posisi Jabatan'
+      titleMessageSuccess = t('notification.addMessageSuccess')
+      captionMessageSuccess = t('notification.captionAddMessageSuccess')
+      titleMessageError = t('notification.addMessageError')
     } else {
       methodFunction = updatePosition(form.id, payload)
-      titleMessageSuccess = 'Update Posisi Jabatan Berhasil'
-      captionMessageSuccess = 'Anda telah berhasil mengupdate posisi jabatan'
-      titleMessageError = 'Gagal Mengupdate Posisi Jabatan'
+      titleMessageSuccess = t('notification.updateMessageSuccess')
+      captionMessageSuccess = t('notification.captionUpdateMessageSuccess')
+      titleMessageError = t('notification.updateMessageError')
     }
     try {
       const response = await methodFunction
@@ -97,7 +96,7 @@ const FormAdjustPosition = ({ dataPosition, onCloseForm, reloadList }) => {
       console.log(error)
       setLoadingForm(false)
       const errorMessage = error.response.success
-      captionMessageError = Object.keys(errorMessage) ? errorMessage : 'Silahkan cek kembali form anda'
+      captionMessageError = Object.keys(errorMessage) ? errorMessage : t('notification.captionMessageError')
       notificationError(titleMessageError, captionMessageError)
       Object.values(errorMessage).forEach((el) => {
         Object.keys(formValidation).forEach((element) => {

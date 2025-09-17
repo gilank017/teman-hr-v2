@@ -36,7 +36,25 @@
     "edit": "Edit",
     "update": "Update",
     "delete": "Hapus",
-    "close": "Tutup"
+    "close": "Tutup",
+    "cancel": "Batal"
+  },
+  "notification": {
+    "addMessageSuccess": "Tambah Data Berhasil",
+    "captionAddMessageSuccess": "kamu telah berhasil menambah data",
+    "updateMessageSuccess": "Ubah Data Berhasil",
+    "captionUpdateMessageSuccess": "kamu telah berhasil mengubah data",
+    "addMessageError": "Tambah Data Gagal",
+    "updateMessageError": "Ubah Data Gagal",
+    "captionMessageError": "Silahkan cek kembali formulir anda",
+    "deleteMessageSuccess": "Hapus Data Berhasil",
+    "captionDeleteMessageSuccess": "Kamu telah berhasil menghapus data",
+    "deleteMessageError": "Hapus Data Gagal",
+    "captionDeleteMessageError": "Kamu gagal menghapus data ini"
+  },
+  "prompt": {
+    "titleDelete": "Apakah kamu yakin ingin menghapus ?",
+    "captionDelete": "Tolong diperhatikan. data yang sudah di hapus tidak dapat di kembalikan lagi."
   },
   "error": {
     "noDataFound": "Tidak Ada Data Yang Ditemukan",
