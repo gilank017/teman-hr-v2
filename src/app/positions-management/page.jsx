@@ -7,13 +7,14 @@ import { useDispatch } from 'react-redux'
 import { updateRoute } from '@/lib/features/hookRoute'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { getListPositions } from '@/services/position'
+import { getListPositions, deletePosition } from '@/services/position'
 import { Box, Text, Flex, Button, Pagination, Modal } from '@mantine/core'
 import { IconPlus } from '@tabler/icons-react'
 import TableSkeleton from '@/components/ui/TableSkeleton'
 import TablePosition from '@/components/pages/position/TablePosition'
 import FormAdjustPosition from '@/components/pages/position/FormAdjustPosition'
 import NoData from '@/components/ui/NoData'
+import { modalDeleteData } from '@/components/ui/Prompt/modalDeleteData'
 
 const defaultParameter = {
   skip: 0,
@@ -123,7 +124,7 @@ const OfficePositionPage = () => {
       setDetailData(val)
     },
     delete: (val) => {
-      console.log('delete', val)
+      modalDeleteData(`${t('menu.officePosition')}`, val.id, val.name, deletePosition, handleGetPositionList)
     }
   }
 

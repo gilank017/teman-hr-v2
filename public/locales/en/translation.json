@@ -36,7 +36,25 @@
     "edit": "Edit",
     "update": "Update",
     "delete": "Delete",
-    "close": "Close"
+    "close": "Close",
+    "cancel": "Cancel"
+  },
+  "notification": {
+    "addMessageSuccess": "Created Data Successfully",
+    "captionAddMessageSuccess": "You have been successfully created data",
+    "updateMessageSuccess": "Updated Data Successfully",
+    "captionUpdateMessageSuccess": "You have been successfully updated data",
+    "addMessageError": "Created Data Error",
+    "updateMessageError": "Updated Data Error",
+    "captionMessageError": "Please recheck your form",
+    "deleteMessageSuccess": "Delete Data Successfully",
+    "captionDeleteMessageSuccess": "You have been successfully delete data",
+    "deleteMessageError": "Delete Data Error",
+    "captionDeleteMessageError": "You failed delete this data"
+  },
+  "prompt": {
+    "titleDelete": "Are you sure to delete data ?",
+    "captionDelete": "Please note that deleted data cannot be recovered."
   },
   "error": {
     "noDataFound": "No Data Found",
