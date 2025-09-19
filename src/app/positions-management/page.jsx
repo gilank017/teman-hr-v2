@@ -8,12 +8,11 @@ import { updateRoute } from '@/lib/features/hookRoute'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { getListPositions, deletePosition } from '@/services/position'
-import { Box, Text, Flex, Button, Pagination, Modal } from '@mantine/core'
+import { Box, Text, Flex, Button, Modal } from '@mantine/core'
 import { IconPlus } from '@tabler/icons-react'
-import TableSkeleton from '@/components/ui/TableSkeleton'
-import TablePosition from '@/components/pages/position/TablePosition'
+import { DataTable } from 'mantine-datatable'
+import ActionMenuTablePosition from '@/components/pages/position/ActionMenuTablePosition'
 import FormAdjustPosition from '@/components/pages/position/FormAdjustPosition'
-import NoData from '@/components/ui/NoData'
 import { modalDeleteData } from '@/components/ui/Prompt/modalDeleteData'
 
 const defaultParameter = {
@@ -46,26 +45,6 @@ const OfficePositionPage = () => {
     }
   ]
 
-  const labelTable = [
-    {
-      label: 'No.',
-      width: 30
-    },
-    {
-      label: `${t('position.table.positionName')}`,
-      width: 200
-    },
-    {
-      label: `${t('position.table.positionLevel')}`,
-      width: 'auto'
-    },
-    {
-      label: `${t('position.table.action')}`,
-      width: 65
-    },
-  ]
-
-
   const handleGetPositionList = async () => {
     setLoading(true)
     try {
@@ -97,6 +76,7 @@ const OfficePositionPage = () => {
       setLoading(false)
     }
   }
+
 
   useEffect(() => {
     dispatch(updateRoute({ 'data': mappingRoute }))
@@ -141,6 +121,37 @@ const OfficePositionPage = () => {
     setParams((oldVal) => ({ ...oldVal, ['skip']: (val - 1) * 10 }))
   }
 
+  const dataColumn = [
+    {
+      accessor: 'index',
+      title: 'No.',
+      width: 50,
+      render: (value) => positionList.indexOf(value) + 1 
+    },
+    {
+      accessor: 'name',
+      width: 200,
+      title: `${t('position.table.positionName')}`,
+    },
+    {
+      accessor: 'level',
+      title: `${t('position.table.positionLevel')}`,
+    },
+    {
+      accessor: 'actions',
+      title: `${t('position.table.action')}`,
+      textAlign: 'center',
+      width: 70,
+      render: (value) => {
+        return (
+          <ActionMenuTablePosition
+            actionMethod={(type) => handleAction(value, type)}
+          />
+        )
+      }
+    }
+  ]
+
   return (
     <AuthLayout>
       <Box mr={12}>
@@ -150,12 +161,28 @@ const OfficePositionPage = () => {
             {access !== null ? handleCreate() : ''}
           </Flex>
           <Box my={20}>
-            {loading ? <TableSkeleton total={3} /> : positionList.length > 0 ? <TablePosition label={labelTable} data={positionList} actionMethod={handleAction} /> : <NoData />}
+            <DataTable
+              height={485}
+              scrollAreaProps={{ type: 'never' }}
+              withTableBorder
+              borderRadius="md"
+              shadow="sm"
+              striped
+              highlightOnHover
+              horizontalSpacing="xs"
+              verticalSpacing="xs"
+              fz="xs"
+              records={positionList}
+              noRecordsText={t('error.noDataFound')}
+              columns={dataColumn}
+              fetching={loading}
+              totalRecords={count}
+              recordsPerPage={params.take}
+              page={(params.skip / params.take) + 1}
+              onPageChange={(val) => handleChangePage(val)}
+            />
           </Box>
         </Box>
-        <Flex justify='end'>
-          <Pagination size='sm' onChange={handleChangePage} total={Math.ceil(count / params.take) || 0} />
-        </Flex>
       </Box>
       <Modal
         opened={openModalForm}

@@ -1,7 +1,5 @@
-const language = localStorage.getItem("hris-tandeem-language")
-
-
 export const validation = ( formData, setValidationForm ) => {
+  const language = localStorage.getItem("hris-tandeem-language")
   const errorMessage = language === '"en"' ? 'This form is required' : 'Formulir ini diperlukan'
   let isError = []
   // eslint-disable-next-line

@@ -12,6 +12,10 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals"),
   {
+    // You might also want to add this rule explicitly for unused vars
+    "no-unused-vars": "warn" // Or "error" for stricter enforcement
+  },
+  {
     ignores: [
       "node_modules/**",
       ".next/**",
