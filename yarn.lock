@@ -2542,6 +2542,11 @@ mantine-contextmenu@^8.2.0:
   resolved "https://registry.yarnpkg.com/mantine-contextmenu/-/mantine-contextmenu-8.2.0.tgz#6f96f881462c89e3dcc6d68035be71dc3371aee1"
   integrity sha512-GKxC13wTnwCmToh6UvQtXN/vVbdbnScwXYtgzyKOzVGGEPBDmkqhKjG/IYq+JqSIqf/t9WoVHPm/81Jqi5FJgg==
 
+mantine-datatable@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/mantine-datatable/-/mantine-datatable-8.2.0.tgz#05ee4f8ed59a0138bff2b9aee8ecc36fbb34f448"
+  integrity sha512-dkdOnDw1DF9t5kxl4VEPM0baubNW2Tc+lvbc0bkVU1bNaDpXphSeoTGU6lai0sQ21hrKSMbfiK0ACczdrSOKyg==
+
 math-intrinsics@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz#a0dd74be81e2aa5c2f27e65ce283605ee4e2b7f9"
