@@ -27,6 +27,10 @@ const ProvideUI = ({ children }) => {
     dispatch(getPermission())
   }, [dispatch])
 
+  useEffect(() => {
+    localStorage.setItem('hris-tandeem-theme', colorTheme)
+  }, [])
+
   const styleUI = createTheme({
     // primaryColor: 'green',
     // colors: {
@@ -35,9 +39,9 @@ const ProvideUI = ({ children }) => {
   })
 
   const handleChangeTheme = (theme) => {
-    const themes = themes === 'dark' ? 'light' : 'dark'
+    const themes = theme === 'dark' ? 'light' : 'dark'
     setColorTheme((current) => current === 'dark' ? 'light' : 'dark')
-    localStorage.setItem('hris-tandeem-theme', colorTheme)
+    localStorage.setItem('hris-tandeem-theme', themes)
   }
 
   // shortcut hotkeys theme
@@ -46,7 +50,7 @@ const ProvideUI = ({ children }) => {
   ])
 
   return (
-    <MantineProvider defaultColorScheme={themeValue ? themeValue : colorTheme} theme={styleUI} withGlobalStyles withNormalizeCSS>
+    <MantineProvider defaultColorScheme={colorTheme} theme={styleUI} withGlobalStyles withNormalizeCSS>
       <LoadingOverlay visible={false} zIndex={1000} overlayProps={{ radius: "md", blur: 3 }} />
       <Notifications autoClose={4000} position="top-right" limit={5} />
       <ModalsProvider>

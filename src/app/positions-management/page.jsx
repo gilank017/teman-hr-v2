@@ -14,6 +14,7 @@ import { DataTable } from 'mantine-datatable'
 import ActionMenuTablePosition from '@/components/pages/position/ActionMenuTablePosition'
 import FormAdjustPosition from '@/components/pages/position/FormAdjustPosition'
 import { modalDeleteData } from '@/components/ui/Prompt/modalDeleteData'
+import { useDebouncedCallback } from '@mantine/hooks'
 
 const defaultParameter = {
   skip: 0,
@@ -23,7 +24,7 @@ const defaultParameter = {
   order: 'desc'
 }
 
-const OfficePositionPage = () => {
+const PositionPage = () => {
   const { access } = useSelector(state => state.permission)
   const dispatch = useDispatch()
   const { t } = useTranslation('translation')
@@ -45,7 +46,7 @@ const OfficePositionPage = () => {
     }
   ]
 
-  const handleGetPositionList = async () => {
+  const handleGetPositionList = useDebouncedCallback(async () => {
     setLoading(true)
     try {
       const response = await getListPositions(params)
@@ -75,7 +76,7 @@ const OfficePositionPage = () => {
     } finally {
       setLoading(false)
     }
-  }
+  }, 300)
 
 
   useEffect(() => {
@@ -126,7 +127,7 @@ const OfficePositionPage = () => {
       accessor: 'index',
       title: 'No.',
       width: 50,
-      render: (value) => positionList.indexOf(value) + 1 
+      render: (value) => positionList.indexOf(value) + 1
     },
     {
       accessor: 'name',
@@ -162,7 +163,7 @@ const OfficePositionPage = () => {
           </Flex>
           <Box my={20}>
             <DataTable
-              height={485}
+              height={530}
               scrollAreaProps={{ type: 'never' }}
               withTableBorder
               borderRadius="md"
@@ -198,4 +199,4 @@ const OfficePositionPage = () => {
   )
 }
 
-export default OfficePositionPage
+export default PositionPage

@@ -8,6 +8,8 @@ import LoadingData from '@/components/ui/LoadingData'
 import { useTranslation } from 'react-i18next'
 import {
   IconGauge,
+  IconAlignBoxCenterTop,
+  IconUsersGroup,
   IconBriefcase,
   IconSettings,
 } from "@tabler/icons-react"
@@ -36,6 +38,20 @@ const AppSidebar = () => {
       title: `${t('menu.company')}`,
       type: 'title',
       icon: null
+    },
+    {
+      href: '/announcement-category',
+      label: 'announcement-category',
+      title: `${t('menu.announcementCategory')}`,
+      type: 'route',
+      icon: <IconAlignBoxCenterTop stroke={1.5} size={18} />,
+    },
+    {
+      href: '/departments-management',
+      label: 'department',
+      title: `${t('menu.department')}`,
+      type: 'route',
+      icon: <IconUsersGroup stroke={1.5} size={18} />,
     },
     {
       href: '/positions-management',
