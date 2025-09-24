@@ -6,7 +6,7 @@ import classes from '@/assets/css/admin-layout.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateRoute } from '@/lib/features/hookRoute'
 import { useTranslation } from 'react-i18next'
-import { getListAnnouncementCategory } from '@/services/announcement-category'
+import { getListExpendType } from '@/services/expend-type'
 import { Box, Text, Flex, Button, Badge } from '@mantine/core'
 import { IconPlus } from '@tabler/icons-react'
 import { DataTable } from 'mantine-datatable'
@@ -20,12 +20,12 @@ const defaultParameter = {
   order: 'desc'
 }
 
-const AnnouncementCategoryPage = () => {
+const ExpenditurePage = () => {
   const { access } = useSelector(state => state.permission)
   const dispatch = useDispatch()
   const { t } = useTranslation('translation')
   const [loading, setLoading] = useState(true)
-  const [announcementCategoryList, setAnnouncementCategoryList] = useState([])
+  const [expendTypeList, setExpendTypeList] = useState([])
   const [params, setParams] = useState(defaultParameter)
   const [count, setCount] = useState(0)
 
@@ -35,24 +35,24 @@ const AnnouncementCategoryPage = () => {
       route: null
     },
     {
-      label: `${t('menu.announcementCategory')}`,
+      label: `${t('menu.expendType')}`,
       route: null
     }
   ]
 
-    const handleGetAnnouncementCategoryList = useDebouncedCallback(async () => {
+  const handleGetExpendTypeList = useDebouncedCallback(async () => {
     setLoading(true)
     try {
-      const response = await getListAnnouncementCategory(params)
+      const response = await getListExpendType(params)
       if (response.success) {
         const resData = response.data.data
         const remapData = resData.map((val) => {
           return val
         })
-        setAnnouncementCategoryList(remapData)
+        setExpendTypeList(remapData)
         setCount(response.data.count)
       } else {
-        setAnnouncementCategoryList([])
+        setDepartmentList([])
         setCount(0)
       }
     } catch (error) {
@@ -62,13 +62,12 @@ const AnnouncementCategoryPage = () => {
     }
   }, 300)
 
-
   useEffect(() => {
     dispatch(updateRoute({ 'data': mappingRoute }))
   }, [dispatch, t])
 
   useEffect(() => {
-    handleGetAnnouncementCategoryList()
+    handleGetExpendTypeList()
   }, [params, t])
 
   const handleChangePage = (val) => {
@@ -76,8 +75,8 @@ const AnnouncementCategoryPage = () => {
   }
 
   const handleCreate = () => {
-    const addPermission = access['announcement-category']
-    const createdPermission = addPermission.find(val => val.alias === 'announcement-category.create')
+    const addPermission = access['expend-type']
+    const createdPermission = addPermission.find(val => val.alias === 'expend-type.create')
     if (createdPermission !== undefined) {
       return (
         <Button size='xs' leftSection={<IconPlus size={14} />} onClick={() => console.log('add ')}>
@@ -92,28 +91,28 @@ const AnnouncementCategoryPage = () => {
       accessor: 'index',
       title: 'No.',
       width: 10,
-      render: (value) => announcementCategoryList.indexOf(value) + 1
+      render: (value) => expendTypeList.indexOf(value) + 1
     },
     {
       accessor: 'name',
       width: 200,
-      title: `${t('announcementCategory.table.categoryName')}`,
+      title: `${t('expendType.table.expendName')}`,
     },
     {
       accessor: 'isActive',
       width: 200,
-      title: `${t('announcementCategory.table.categoryStatus')}`,
+      title: `${t('expendType.table.expendStatus')}`,
       render: (value) => {
         return (
           <Badge color={value ? 'green' : 'red'} size='xs' tt='capitalize'>
-            {value ? t('announcementCategory.active') : t('announcementCategory.inactive')}
+            {value ? t('expendType.active') : t('expendType.inactive')}
           </Badge>
         )
       }
     },
     {
       accessor: 'actions',
-      title: `${t('announcementCategory.table.action')}`,
+      title: `${t('expendType.table.action')}`,
       textAlign: 'right',
       width: 70,
       render: (value) => {
@@ -127,7 +126,7 @@ const AnnouncementCategoryPage = () => {
   return (
     <AuthLayout>
       <Box mr={12}>
-        <Text className={classes.titleLayout} mb={10}>{t('announcementCategory.title')}</Text>
+        <Text className={classes.titleLayout} mb={10}>{t('expendType.title')}</Text>
         <Box>
           <Flex justify='flex-end' mb={40}>
             {access !== null ? handleCreate() : ''}
@@ -144,7 +143,7 @@ const AnnouncementCategoryPage = () => {
               horizontalSpacing="xs"
               verticalSpacing="xs"
               fz="xs"
-              records={announcementCategoryList}
+              records={expendTypeList}
               noRecordsText={t('error.noDataFound')}
               columns={dataColumn}
               fetching={loading}
@@ -160,4 +159,4 @@ const AnnouncementCategoryPage = () => {
   )
 }
 
-export default AnnouncementCategoryPage
+export default ExpenditurePage
