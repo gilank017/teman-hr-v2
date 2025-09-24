@@ -11,6 +11,10 @@
   "menu": {
     "dashboard": "Dasbor",
     "company": "Perusahaan",
+    "businessTrip": "Perjalanan Bisnis",
+    "businessTripPurpose": "Tujuan",
+    "businessTripCost": "Biaya",
+    "expendType": "Jenis Pengeluaran",
     "announcementCategory": "Kategori Pengumuman",
     "department": "Departemen",
     "officePosition": "Posisi Jabatan",
@@ -48,7 +52,17 @@
     "table": {
       "departmentName": "Nama Kategori",
       "departmentLeader": "Status Kategori",
-      "action": "Action"
+      "action": "Aksi"
+    }
+  },
+  "expendType": {
+    "title": "Manajemen Jenis Pengeluaran",
+    "active": "Aktif",
+    "inactive": "Tidak Aktif",
+    "table": {
+      "expendName": "Nama Pengeluaran",
+      "expendStatus": "Status Pengeluaran",
+      "action": "Aksi"
     }
   },
   "actionButton": {

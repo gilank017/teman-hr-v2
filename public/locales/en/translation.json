@@ -11,6 +11,10 @@
   "menu": {
     "dashboard": "Dashboard",
     "company": "Company",
+    "businessTrip": "Business Trip",
+    "businessTripPurpose": "Purpose",
+    "businessTripCost": "Cost",
+    "expendType": "Expenditure Types",
     "announcementCategory": "Announcement Category",
     "department": "Department",
     "officePosition": "Office Position",
@@ -50,6 +54,24 @@
       "categoryStatus": "Category Status",
       "action": "Action"
     }
+  },
+  "expendType": {
+    "title": "Expenditure Types Management",
+    "active": "Active",
+    "inactive": "Inactive",
+    "table": {
+      "expendName": "Expenditure Name",
+      "expendStatus": "Expenditure Status",
+      "action": "Action"
+    }
+  },
+  "businessTripPurpose": {
+    "menu": "Business Trip Purpose",
+    "title": "Business Trip Purpose Management"
+  },
+  "businessTripCost": {
+    "menu": "Business Trip Cost",
+    "title": "Business Trip Cost Management"
   },
   "actionButton": {
     "add": "Add",

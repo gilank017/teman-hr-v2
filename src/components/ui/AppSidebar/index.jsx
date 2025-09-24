@@ -8,9 +8,12 @@ import LoadingData from '@/components/ui/LoadingData'
 import { useTranslation } from 'react-i18next'
 import {
   IconGauge,
+  IconFileDollar,
   IconAlignBoxCenterTop,
   IconUsersGroup,
   IconBriefcase,
+  IconMapDollar,
+  IconFolderDollar,
   IconSettings,
 } from "@tabler/icons-react"
 
@@ -40,6 +43,13 @@ const AppSidebar = () => {
       icon: null
     },
     {
+      href: '/expenditure-types',
+      label: 'expend-type',
+      title: `${t('menu.expendType')}`,
+      type: 'route',
+      icon: <IconFileDollar stroke={1.5} size={18} />,
+    },
+    {
       href: '/announcement-category',
       label: 'announcement-category',
       title: `${t('menu.announcementCategory')}`,
@@ -59,6 +69,27 @@ const AppSidebar = () => {
       title: `${t('menu.officePosition')}`,
       type: 'route',
       icon: <IconBriefcase stroke={1.5} size={18} />,
+    },
+    {
+      href: null,
+      label: 'business-trip',
+      title: `${t('menu.businessTrip')}`,
+      type: 'title',
+      icon: null
+    },
+    {
+      href: '/business-trip-purpose',
+      label: 'business-trip-purpose',
+      title: `${t('menu.businessTripPurpose')}`,
+      type: 'route',
+      icon: <IconFolderDollar stroke={1.5} size={18} />,
+    },
+    {
+      href: '/business-trip-cost',
+      label: 'business-trip-cost',
+      title: `${t('menu.businessTripCost')}`,
+      type: 'route',
+      icon: <IconMapDollar stroke={1.5} size={18} />,
     },
     {
       href: null,
@@ -89,6 +120,7 @@ const AppSidebar = () => {
         dataPermission.push('dashboard')
         dataPermission.push('setting')
         dataPermission.push('company')
+        dataPermission.push('business-trip')
         dataPermission.push('config')
 
         const isAllowed = dataPermission.includes(label)
