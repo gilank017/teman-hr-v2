@@ -50,8 +50,8 @@
     "active": "Aktif",
     "inactive": "Tidak Aktif",
     "table": {
-      "departmentName": "Nama Kategori",
-      "departmentLeader": "Status Kategori",
+      "categoryName": "Nama Kategori",
+      "categoryStatus": "Status Kategori",
       "action": "Aksi"
     }
   },
@@ -64,6 +64,14 @@
       "expendStatus": "Status Pengeluaran",
       "action": "Aksi"
     }
+  },
+  "businessTripPurpose": {
+    "menu": "Tujuan Perjalanan Bisnis",
+    "title": "Manajemen Tujuan Perjalanan Bisnis"
+  },
+  "businessTripCost": {
+    "menu": "Biaya Perjalanan Bisnis",
+    "title": "Manajemen Biaya Perjalanan Bisnis"
   },
   "actionButton": {
     "add": "Tambah",
