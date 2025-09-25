@@ -28,7 +28,7 @@ const LanguageSetting = () => {
 
   const renderDataOption = ({ option, checked }) => {
     return (
-      <Group flex='1' gap='sm'>
+      <Group flex='1' gap='sm' mb={6}>
         {<Avatar size={20} radius="sm" src={option.icon} />}
         {option.label}
         {checked && <IconCheck size="1.3rem" stroke={1.5} style={{ marginInlineStart: 'auto' }} />}
