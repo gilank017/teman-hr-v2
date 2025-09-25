@@ -91,7 +91,13 @@ const ExpenditurePage = () => {
       accessor: 'index',
       title: 'No.',
       width: 10,
-      render: (value) => expendTypeList.indexOf(value) + 1
+      render: (value) => {
+        let number = 0
+        const currentPage = (params.skip / params.take) + 1
+        const indexPage = expendTypeList.indexOf(value)
+        number = (currentPage - 1) * params.take + indexPage + 1
+        return number
+      }
     },
     {
       accessor: 'name',
@@ -147,6 +153,7 @@ const ExpenditurePage = () => {
               noRecordsText={t('error.noDataFound')}
               columns={dataColumn}
               fetching={loading}
+              loaderBackgroundBlur={3}
               totalRecords={count}
               recordsPerPage={params.take}
               page={(params.skip / params.take) + 1}

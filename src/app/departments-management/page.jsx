@@ -92,7 +92,13 @@ const DepartmentPage = () => {
       accessor: 'index',
       title: 'No.',
       width: 10,
-      render: (value) => departmentList.indexOf(value) + 1
+      render: (value) => {
+        let number = 0
+        const currentPage = (params.skip / params.take) + 1
+        const indexPage = departmentList.indexOf(value)
+        number = (currentPage - 1) * params.take + indexPage + 1
+        return number
+      }
     },
     {
       accessor: 'name',
@@ -142,6 +148,7 @@ const DepartmentPage = () => {
               noRecordsText={t('error.noDataFound')}
               columns={dataColumn}
               fetching={loading}
+              loaderBackgroundBlur={3}
               totalRecords={count}
               recordsPerPage={params.take}
               page={(params.skip / params.take) + 1}

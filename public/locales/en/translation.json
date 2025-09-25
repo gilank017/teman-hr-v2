@@ -67,11 +67,29 @@
   },
   "businessTripPurpose": {
     "menu": "Business Trip Purpose",
-    "title": "Business Trip Purpose Management"
+    "title": "Business Trip Purpose Management",
+    "active": "Active",
+    "inactive": "Inactive",
+    "table": {
+      "purposeName": "Purpose Name",
+      "purposeStatus": "Purpose Status",
+      "action": "Action"
+    }
   },
   "businessTripCost": {
     "menu": "Business Trip Cost",
-    "title": "Business Trip Cost Management"
+    "title": "Business Trip Cost Management",
+    "active": "Active",
+    "inactive": "Inactive",
+    "table": {
+      "costName": "Cost Name",
+      "costStatus": "Cost Status",
+      "action": "Action"
+    }
+  },
+  "setting": {
+    "title": "System Settings",
+    "language": "Language"
   },
   "actionButton": {
     "add": "Add",
