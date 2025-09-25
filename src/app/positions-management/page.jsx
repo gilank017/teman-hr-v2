@@ -61,7 +61,7 @@ const PositionPage = () => {
         const remapData = resData.map((val) => {
           return {
             ...val,
-            level: defaultLevelPosition[val.level]
+            level_name: defaultLevelPosition[val.level]
           }
         })
         setPositionList(remapData)
@@ -140,7 +140,7 @@ const PositionPage = () => {
       title: `${t('position.table.positionName')}`,
     },
     {
-      accessor: 'level',
+      accessor: 'level_name',
       title: `${t('position.table.positionLevel')}`,
     },
     {

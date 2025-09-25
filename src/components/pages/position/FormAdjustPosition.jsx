@@ -124,10 +124,11 @@ const FormAdjustPosition = ({ dataPosition, onCloseForm, reloadList }) => {
   }, [dataPosition])
 
   const handleSetForm = (dataPosition) => {
+    console.log(dataPosition)
     const dataDetail = {
       id: dataPosition.id,
       name: dataPosition.name,
-      level: dataPosition.level,
+      level: `${dataPosition.level}`,
       description: dataPosition.description,
     }
     setFormData(dataDetail)
