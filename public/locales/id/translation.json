@@ -67,11 +67,29 @@
   },
   "businessTripPurpose": {
     "menu": "Tujuan Perjalanan Bisnis",
-    "title": "Manajemen Tujuan Perjalanan Bisnis"
+    "title": "Manajemen Tujuan Perjalanan Bisnis",
+    "active": "Aktif",
+    "inactive": "Tidak Aktif",
+    "table": {
+      "purposeName": "Nama Tujuan",
+      "purposeStatus": "Status Tujuan",
+      "action": "Aksi"
+    }
   },
   "businessTripCost": {
     "menu": "Biaya Perjalanan Bisnis",
-    "title": "Manajemen Biaya Perjalanan Bisnis"
+    "title": "Manajemen Biaya Perjalanan Bisnis",
+    "active": "Aktif",
+    "inactive": "Tidak Aktif",
+    "table": {
+      "costName": "Nama Biaya",
+      "costStatus": "Status Biaya",
+      "action": "Aksi"
+    }
+  },
+  "setting": {
+    "title": "Setelan Sistem",
+    "language": "Bahasa"
   },
   "actionButton": {
     "add": "Tambah",

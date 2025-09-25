@@ -126,7 +126,13 @@ const PositionPage = () => {
       accessor: 'index',
       title: 'No.',
       width: 50,
-      render: (value) => positionList.indexOf(value) + 1
+      render: (value) => {
+        let number = 0
+        const currentPage = (params.skip / params.take) + 1
+        const indexPage = positionList.indexOf(value)
+        number = (currentPage - 1) * params.take + indexPage + 1
+        return number
+      }
     },
     {
       accessor: 'name',
@@ -176,6 +182,7 @@ const PositionPage = () => {
               noRecordsText={t('error.noDataFound')}
               columns={dataColumn}
               fetching={loading}
+              loaderBackgroundBlur={3}
               totalRecords={count}
               recordsPerPage={params.take}
               page={(params.skip / params.take) + 1}
