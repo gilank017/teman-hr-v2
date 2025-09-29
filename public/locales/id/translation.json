@@ -89,7 +89,12 @@
   },
   "setting": {
     "title": "Setelan Sistem",
-    "language": "Bahasa"
+    "language": "Bahasa",
+    "theme": "Tema",
+    "label": {
+      "themeDark": "Gelap",
+      "themeLight": "Terang"
+    }
   },
   "actionButton": {
     "add": "Tambah",

@@ -89,7 +89,12 @@
   },
   "setting": {
     "title": "System Settings",
-    "language": "Language"
+    "language": "Language",
+    "theme": "Theme",
+    "label": {
+      "themeDark": "Dark",
+      "themeLight": "Light"
+    }
   },
   "actionButton": {
     "add": "Add",

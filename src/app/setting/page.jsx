@@ -7,8 +7,9 @@ import classes from '@/assets/css/admin-layout.module.css'
 import { useDispatch } from 'react-redux'
 import { updateRoute } from '@/lib/features/hookRoute'
 import { useTranslation } from 'react-i18next'
-import { IconLanguage } from '@tabler/icons-react'
+import { IconLanguage, IconPalette } from '@tabler/icons-react'
 import LanguageSetting from '@/components/pages/setting/LanguageSetting'
+import ThemeSetting from '@/components/pages/setting/ThemeSetting'
 
 const SettingPage = () => {
   const dispatch = useDispatch()
@@ -19,6 +20,12 @@ const SettingPage = () => {
       icon: IconLanguage,
       label: `${t('setting.language')}`,
       component: LanguageSetting,
+      route: null
+    },
+    {
+      icon: IconPalette,
+      label: `${t('setting.theme')}`,
+      component: ThemeSetting,
       route: null
     }
   ]
