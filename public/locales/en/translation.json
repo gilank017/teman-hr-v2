@@ -23,7 +23,7 @@
   },
   "position": {
     "title": "Office Position Management",
-    "table": {
+    "label": {
       "positionName": "Position Name",
       "positionLevel": "Position Level",
       "positionDescription": "Position Description",
@@ -39,7 +39,7 @@
   },
   "department": {
     "title": "Departments Management",
-    "table": {
+    "label": {
       "departmentName": "Department Name",
       "departmentLeader": "Department Leader",
       "action": "Action"
@@ -49,7 +49,7 @@
     "title": "Announcement Category Management",
     "active": "Active",
     "inactive": "Inactive",
-    "table": {
+    "label": {
       "categoryName": "Category Name",
       "categoryStatus": "Category Status",
       "action": "Action"
@@ -59,7 +59,7 @@
     "title": "Expenditure Types Management",
     "active": "Active",
     "inactive": "Inactive",
-    "table": {
+    "label": {
       "expendName": "Expenditure Name",
       "expendStatus": "Expenditure Status",
       "action": "Action"
@@ -70,7 +70,7 @@
     "title": "Business Trip Purpose Management",
     "active": "Active",
     "inactive": "Inactive",
-    "table": {
+    "label": {
       "purposeName": "Purpose Name",
       "purposeStatus": "Purpose Status",
       "action": "Action"
@@ -81,7 +81,7 @@
     "title": "Business Trip Cost Management",
     "active": "Active",
     "inactive": "Inactive",
-    "table": {
+    "label": {
       "costName": "Cost Name",
       "costStatus": "Cost Status",
       "action": "Action"

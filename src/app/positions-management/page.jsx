@@ -137,15 +137,15 @@ const PositionPage = () => {
     {
       accessor: 'name',
       width: 200,
-      title: `${t('position.table.positionName')}`,
+      title: `${t('position.label.positionName')}`,
     },
     {
       accessor: 'level_name',
-      title: `${t('position.table.positionLevel')}`,
+      title: `${t('position.label.positionLevel')}`,
     },
     {
       accessor: 'actions',
-      title: `${t('position.table.action')}`,
+      title: `${t('position.label.action')}`,
       textAlign: 'center',
       width: 70,
       render: (value) => {

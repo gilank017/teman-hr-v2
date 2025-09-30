@@ -102,12 +102,12 @@ const ExpenditurePage = () => {
     {
       accessor: 'name',
       width: 200,
-      title: `${t('expendType.table.expendName')}`,
+      title: `${t('expendType.label.expendName')}`,
     },
     {
       accessor: 'isActive',
       width: 200,
-      title: `${t('expendType.table.expendStatus')}`,
+      title: `${t('expendType.label.expendStatus')}`,
       render: (value) => {
         return (
           <Badge color={value ? 'green' : 'red'} size='xs' tt='capitalize'>
@@ -118,7 +118,7 @@ const ExpenditurePage = () => {
     },
     {
       accessor: 'actions',
-      title: `${t('expendType.table.action')}`,
+      title: `${t('expendType.label.action')}`,
       textAlign: 'right',
       width: 70,
       render: (value) => {

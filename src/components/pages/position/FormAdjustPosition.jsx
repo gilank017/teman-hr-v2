@@ -144,7 +144,7 @@ const FormAdjustPosition = ({ dataPosition, onCloseForm, reloadList }) => {
         <TextInput
           name='name'
           value={formData.name}
-          label={`${t('position.table.positionName')}`}
+          label={`${t('position.label.positionName')}`}
           error={validationForm.name.isError ? `${validationForm.name.message}` : ''}
           onChange={(val) => handleChangeForm('name', val.target.value)}
           withAsterisk
@@ -155,7 +155,7 @@ const FormAdjustPosition = ({ dataPosition, onCloseForm, reloadList }) => {
         <Select
           name='level'
           value={formData.level}
-          label={`${t('position.table.positionLevel')}`}
+          label={`${t('position.label.positionLevel')}`}
           data={defaultLevelPosition}
           error={validationForm.level.isError ? `${validationForm.level.message}` : ''}
           onChange={(val) => handleChangeForm('level', val)}
@@ -168,7 +168,7 @@ const FormAdjustPosition = ({ dataPosition, onCloseForm, reloadList }) => {
         <Textarea
           name='description'
           value={formData.description}
-          label={`${t('position.table.positionDescription')}`}
+          label={`${t('position.label.positionDescription')}`}
           onChange={(val) => handleChangeForm('description', val.target.value)}
           size='xs'
           autosize

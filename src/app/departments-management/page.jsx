@@ -103,17 +103,17 @@ const DepartmentPage = () => {
     {
       accessor: 'name',
       width: 200,
-      title: `${t('department.table.departmentName')}`,
+      title: `${t('department.label.departmentName')}`,
     },
     {
       accessor: 'leader',
       width: 200,
-      title: `${t('department.table.departmentLeader')}`,
+      title: `${t('department.label.departmentLeader')}`,
       render: (value) => value.leader !== null ? value.leader.fullName : '-',
     },
     {
       accessor: 'actions',
-      title: `${t('department.table.action')}`,
+      title: `${t('department.label.action')}`,
       textAlign: 'right',
       width: 70,
       render: (value) => {

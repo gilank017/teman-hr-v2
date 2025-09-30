@@ -103,12 +103,12 @@ const AnnouncementCategoryPage = () => {
     {
       accessor: 'name',
       width: 200,
-      title: `${t('announcementCategory.table.categoryName')}`,
+      title: `${t('announcementCategory.label.categoryName')}`,
     },
     {
       accessor: 'isActive',
       width: 200,
-      title: `${t('announcementCategory.table.categoryStatus')}`,
+      title: `${t('announcementCategory.label.categoryStatus')}`,
       render: (value) => {
         return (
           <Badge color={value ? 'green' : 'red'} size='xs' tt='capitalize'>
@@ -119,7 +119,7 @@ const AnnouncementCategoryPage = () => {
     },
     {
       accessor: 'actions',
-      title: `${t('announcementCategory.table.action')}`,
+      title: `${t('announcementCategory.label.action')}`,
       textAlign: 'right',
       width: 70,
       render: (value) => {

@@ -102,12 +102,12 @@ const BusinessTripCostPage = () => {
     {
       accessor: 'name',
       width: 200,
-      title: `${t('businessTripCost.table.costName')}`,
+      title: `${t('businessTripCost.label.costName')}`,
     },
     {
       accessor: 'isActive',
       width: 200,
-      title: `${t('businessTripCost.table.costStatus')}`,
+      title: `${t('businessTripCost.label.costStatus')}`,
       render: (value) => {
         return (
           <Badge color={value ? 'green' : 'red'} size='xs' tt='capitalize'>
@@ -118,7 +118,7 @@ const BusinessTripCostPage = () => {
     },
     {
       accessor: 'actions',
-      title: `${t('announcementCategory.table.action')}`,
+      title: `${t('announcementCategory.label.action')}`,
       textAlign: 'right',
       width: 70,
       render: (value) => {
