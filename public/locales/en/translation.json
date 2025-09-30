@@ -12,6 +12,7 @@
     "dashboard": "Dashboard",
     "company": "Company",
     "businessTrip": "Business Trip",
+    "schedules": "Schedule",
     "businessTripPurpose": "Purpose",
     "businessTripCost": "Cost",
     "expendType": "Expenditure Types",
@@ -20,6 +21,14 @@
     "officePosition": "Office Position",
     "config": "System Configuration",
     "setting" : "Setting"
+  },
+  "schedule": {
+    "title": "Schedule Management",
+    "label": {
+      "scheduleName": "Schedule Name",
+      "scheduleStatus": "Schedule Status",
+      "action": "Action"
+    }
   },
   "position": {
     "title": "Office Position Management",

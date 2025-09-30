@@ -111,8 +111,8 @@ const AnnouncementCategoryPage = () => {
       title: `${t('announcementCategory.label.categoryStatus')}`,
       render: (value) => {
         return (
-          <Badge color={value ? 'green' : 'red'} size='xs' tt='capitalize'>
-            {value ? t('announcementCategory.active') : t('announcementCategory.inactive')}
+          <Badge color={value.isActive ? 'green' : 'red'} size='xs' tt='capitalize' w={80}>
+            {value.isActive ? t('announcementCategory.active') : t('announcementCategory.inactive')}
           </Badge>
         )
       }

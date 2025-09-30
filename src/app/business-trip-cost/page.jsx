@@ -110,8 +110,8 @@ const BusinessTripCostPage = () => {
       title: `${t('businessTripCost.label.costStatus')}`,
       render: (value) => {
         return (
-          <Badge color={value ? 'green' : 'red'} size='xs' tt='capitalize'>
-            {value ? t('businessTripCost.active') : t('businessTripCost.inactive')}
+          <Badge color={value.isActive ? 'green' : 'red'} size='xs' tt='capitalize' w={80}>
+            {value.isActive ? t('businessTripCost.active') : t('businessTripCost.inactive')}
           </Badge>
         )
       }

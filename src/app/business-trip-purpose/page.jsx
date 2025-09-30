@@ -110,8 +110,8 @@ const BusinessTripPurposePage = () => {
       title: `${t('businessTripPurpose.label.purposeStatus')}`,
       render: (value) => {
         return (
-          <Badge color={value ? 'green' : 'red'} size='xs' tt='capitalize'>
-            {value ? t('businessTripPurpose.active') : t('businessTripPurpose.inactive')}
+          <Badge color={value.isActive ? 'green' : 'red'} size='xs' tt='capitalize' w={80}>
+            {value.isActive ? t('businessTripPurpose.active') : t('businessTripPurpose.inactive')}
           </Badge>
         )
       }

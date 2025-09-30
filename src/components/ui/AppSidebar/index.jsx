@@ -8,6 +8,7 @@ import LoadingData from '@/components/ui/LoadingData'
 import { useTranslation } from 'react-i18next'
 import {
   IconGauge,
+  IconCalendarWeek,
   IconFileDollar,
   IconAlignBoxCenterTop,
   IconUsersGroup,
@@ -41,6 +42,13 @@ const AppSidebar = () => {
       title: `${t('menu.company')}`,
       type: 'title',
       icon: null
+    },
+    {
+      href: '/schedules-management',
+      label: 'schedule',
+      title: `${t('menu.schedules')}`,
+      type: 'route',
+      icon: <IconCalendarWeek stroke={1.5} size={18} />,
     },
     {
       href: '/expenditure-types',

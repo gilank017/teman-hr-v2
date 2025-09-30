@@ -12,6 +12,7 @@
     "dashboard": "Dasbor",
     "company": "Perusahaan",
     "businessTrip": "Perjalanan Bisnis",
+    "schedules": "Jadwal",
     "businessTripPurpose": "Tujuan",
     "businessTripCost": "Biaya",
     "expendType": "Jenis Pengeluaran",
@@ -20,6 +21,16 @@
     "officePosition": "Posisi Jabatan",
     "config": "Konfigurasi Sistem",
     "setting" : "Pengaturan"
+  },
+  "schedule": {
+    "title": "Manajemen Jadwal",
+    "active": "Aktif",
+    "inactive": "Tidak Aktif",
+    "label": {
+      "scheduleName": "Nama Jadwal",
+      "scheduleStatus": "Status Jadwal",
+      "action": "Aksi"
+    }
   },
   "position": {
     "title": "Manajemen Posisi Jabatan",
